@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Meu Portfólio - Rafael Gomes</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #FFD700; /* Cor dourada ao passar o mouse */
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        h1 {
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        h2 {
+            color: #007BFF;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 5px;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        img {
+            max-width: 80%; /* Diminuindo o tamanho da imagem */
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+            display: block; /* Para centralizar a imagem */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background: #007BFF;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+        section {
+            display: none;
+        }
+        #home {
+            display: block;
+        }
+        ul {
+            padding-left: 20px; /* Adicionando padding à lista */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Portfólio Rafael Gomes</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('sobre')">Sobre Mim</a></li>
+                <li><a href="#" onclick="showSection('projetos')">Projetos</a></li>
+                <li><a href="#" onclick="showSection('contato')">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Olá! Seja bem-vindo ao meu Portfólio :)</h2>
+            <p>Estou animado para compartilhar meus projetos e experiências com você.</p>
+        </section>
+
+        <section id="sobre">
+            <h2>Quem Sou Eu</h2>
+            <p>Meu nome é Rafael Gomes. Sou estudante de Sistema de Informação e tenho paixão por tecnologia.</p>
+            <p>Além de programação, gosto de academia, música e às vezes participo de campeonatos de surf.</p>
+            <img src="img/minha-foto.jpg.jpeg" alt="Minha Foto">
+        </section>
+
+        <section id="projetos">
+            <h2>Projetos Recentes</h2>
+            <ul>
+                <li>Projeto 1: Jogo da cobrinha</li>
+            </ul>
+        </section>
+
+        <section id="contato">
+            <h2>Fale Comigo</h2>
+            <p>Email: rafafelipe2527@gmail.com</p>
+            <p>Telefone: (81) 99935-7636</p>
+            <h2>Localização</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31623.347292189545!2d-34.8959096!3d-8.0475629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab3b80a4c2a2c3%3A0x29b47baf688a8c4b!2sRecife%2C%20PE!5e0!3m2!1spt-BR!2sbr!4v1632679311204!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </main>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
